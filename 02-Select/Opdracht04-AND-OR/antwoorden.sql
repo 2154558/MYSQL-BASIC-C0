@@ -26,19 +26,19 @@ SELECT name, wage FROM players WHERE nationality ="Brazil " AND club = "Manchest
 SELECT name FROM players WHERE age >"30 " AND wage < "10000 ";
 
 -- Opdracht 10
-SELECT name, age FROM players WHERE nationality ="Portugal " OR nationality ="Spain ";
+SELECT name, age, club FROM players WHERE nationality ="Portugal " OR nationality ="Spain ";
 
 -- Opdracht 11
-SELECT name, age, club FROM players WHERE nationality ="Portugal " AND club ="Chelsea"
+SELECT name, age, club FROM players WHERE nationality ="Portugal " OR club ="Chelsea"
 
 -- Opdracht 12
 SELECT name, club FROM players WHERE age >"40 " AND wage >"10000"
 
 -- Opdracht 13
-SELECT * FROM players WHERE nationality ="Netherlands" AND club ="ajax " OR club ="FC Utrecht"
+SELECT * FROM players WHERE nationality ="Netherlands" AND club ="ajax " OR nationality ="Netherlands" AND club ="FC Utrecht"
 
 -- Opdracht 14
 SELECT * FROM players WHERE nationality ="england" AND age >"20"  and wage >"100000"
 
 -- Opdracht 15
-SELECT name, age, nationality From players WHERE nationality ="brazil" or nationality ="Argentina "
+SELECT name, age, nationality From players WHERE nationality ="brazil" AND age >"25" or age >"25" AND nationality ="Argentina " 
