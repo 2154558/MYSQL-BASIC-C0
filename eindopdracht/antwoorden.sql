@@ -8,31 +8,31 @@ SELECT * FROM videogamesales WHERE year ="1999"
 SELECT SUM(NA_Sales) FROM videogamesales WHERE genre = "Sports" 
 
 -- Opdracht 4
-
+SELECT name, platform FROM videogamesales WHERE publisher = "Nintendo" AND year >"1990" AND year <"2005"
 
 -- Opdracht 5
 SELECT MAX(Global_Sales) FROM videogamesales
 
 -- Opdracht 6 
-SELECT AVG(EU_Sales) FROM videogamesales WHERE genre = "Puzzle"
+SELECT ROUND(AVG(EU_Sales)) FROM videogamesales WHERE genre = "Puzzle"
 
 -- Opdracht 7 
 SELECT name, genre, publisher FROM videogamesales WHERE JP_Sales = "532"
 
 -- Opdracht 8
-SELECT SUM(name) FROM videogamesales WHERE publisher = "nintendo"
+SELECT COUNT(name) FROM videogamesales WHERE publisher = "nintendo"
 
 -- Opdracht 9
 SELECT name, year FROM videogamesales WHERE publisher = "Nintendo" AND genre = "Racing" OR genre = "Racing" AND publisher ="Activision"
 
 -- Opdracht 10
-SELECT AVG(Global_Sales) AS gem_verkoop FROM videogamesales 
+SELECT ROUND(AVG(Global_Sales)) AS gem_verkoop FROM videogamesales 
 
 -- Opdracht 11
 DELETE FROM videogamesales WHERE name ="Halo 2"
 
 -- Opdracht 12
-DELETE FROM videogamesales WHERE year"2012" OR publisher = "Ubisoft"
+DELETE FROM videogamesales WHERE year"2012" AND publisher = "Ubisoft"
 
 -- Opdracht 13
 DELETE FROM videogamesales WHERE genre ="Adventure" AND publisher = "Nintendo"
