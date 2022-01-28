@@ -2,13 +2,13 @@
 SELECT max(wage) AS hoogste_loon_speler_fc_utrecht.  FROM  club ="FC Utrecht"
 
 -- Opdracht 2 
-SELECT AVG(wage) AS gem_loon FROM  players WHERE club ="FC Utrecht"
+SELECT ROUND(AVG(wage)) AS gem_loon FROM  players WHERE club ="FC Utrecht"
 
 -- Opdracht 3
-SELECT avg(wage) FROM  players 
+SELECT SUM(wage) AS totaalloon FROM  players 
 
 -- Opdracht 4
-SELECT sum(wage) AS totaal_loon FROM  players WHERE club = "FC Groningen"
+SELECT COUNT(name) AS totaal_spelers FROM  players WHERE club = "FC Groningen"
 
 -- Opdracht 5
 SELECT COUNT(name) AS aantal_spelers FROM  players WHERE club = "Manchester City" OR club = "Manchester United";
